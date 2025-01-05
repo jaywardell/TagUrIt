@@ -28,4 +28,4 @@ To find all paragraph tags in a html string, call the `all(in:)` method:
         return tag.content
     }
 
-Note that the content that is returned is raw html and so it can contain html-encoded elements such as QUOT; or &amp;
+Note that the content that is returned is raw html and so it can contain html-encoded elements such as `QUOT;` or `&amp;`
