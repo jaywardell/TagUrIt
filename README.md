@@ -16,7 +16,7 @@ To find all paragraph tags in a html string, call the `all(in:)` method:
     
  You will be given an array of `ParagraphTag` instances from which you can retrieve the content or the attributes.
  
- For instance, here's a method that looks for the first `ParagraphTag` whose id is the string passed in and returns the content of  
+ For instance, here's a method that looks for the first `ParagraphTag` whose id attribute matches the string passed in and returns its content   
  
      private func getString(for id: String) -> String? {
         
