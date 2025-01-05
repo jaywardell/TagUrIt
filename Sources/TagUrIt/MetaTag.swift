@@ -8,9 +8,9 @@
 import Foundation
 
 public struct MetaTag: Equatable {
-    let attributes: [HTMLAttribute]
+    public let attributes: [HTMLAttribute]
     
-    func attribute(for key: String) -> HTMLAttribute? {
+    public func attribute(for key: String) -> HTMLAttribute? {
         attributes.first { $0.name == key }
     }
     

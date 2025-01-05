@@ -8,10 +8,10 @@
 import Foundation
 
 public struct ParagraphTag: Equatable {
-    let content: String
-    let attributes: [HTMLAttribute]
+    public let content: String
+    public let attributes: [HTMLAttribute]
     
-    func attribute(for key: String) -> HTMLAttribute? {
+    public func attribute(for key: String) -> HTMLAttribute? {
         attributes.first { $0.name == key }
     }
 

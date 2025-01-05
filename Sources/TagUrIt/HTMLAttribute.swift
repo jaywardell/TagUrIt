@@ -8,7 +8,7 @@
 import Foundation
 import RegexBuilder
 
-struct HTMLAttribute: Equatable {
+public struct HTMLAttribute: Equatable {
     let name: String
     let value: String
 }
