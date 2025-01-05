@@ -9,8 +9,8 @@ import Foundation
 import RegexBuilder
 
 public struct HTMLAttribute: Equatable {
-    let name: String
-    let value: String
+    public let name: String
+    public let value: String
 }
 
 extension HTMLAttribute {
