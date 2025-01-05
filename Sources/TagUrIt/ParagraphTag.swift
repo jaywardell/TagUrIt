@@ -18,7 +18,7 @@ public struct ParagraphTag: Equatable {
     static var match: Regex<(Substring, Substring, Substring)> { /<p\s*([^>]*)>(.*?)(?=<\/p>|<p|<\/ p)/.dotMatchesNewlines() }
 }
 
-public extension ParagraphTag {
+extension ParagraphTag {
     
     /// if the string passed in contains a html paragraph tag, then return a ParagraphTag instance that contains all its attributes
     static func from(string: String) -> ParagraphTag? {
@@ -32,7 +32,7 @@ public extension ParagraphTag {
     }
     
     /// given a html string, return a ParagraphTag instance for every p tag that can be found
-    static func all(in string: String) -> [ParagraphTag] {
+    public static func all(in string: String) -> [ParagraphTag] {
 
         return string.matches(of: match).compactMap { match in
             

@@ -17,7 +17,7 @@ public struct MetaTag: Equatable {
     static var regex: Regex<(Substring, Substring)> { /<meta\s+(.+?)\s*\/*>/ }
 }
 
-public extension MetaTag {
+extension MetaTag {
     
     /// if the string passed in contains a html meta tag, then return a MetaTag instance that contains all its attributes
     static func from(string: String) -> MetaTag? {
@@ -31,7 +31,7 @@ public extension MetaTag {
     }
     
     /// given a html string, return a MetaTag instance for every meta tag that can be found
-    static func all(in string: String) -> [MetaTag] {
+    public static func all(in string: String) -> [MetaTag] {
 
         return string.matches(of: regex).compactMap { match in
             return Self.from(string: String(match.0))
